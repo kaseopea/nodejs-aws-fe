@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import Container from "@material-ui/core/Container";
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Cart from "components/MainLayout/components/Cart";
@@ -23,7 +24,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     homeLink: {
       color: 'white',
-      textDecoration: 'none'
+      textDecoration: 'none',
+      fontFamily: '\'Secular One\', sans-serif'
     }
   }),
 );
@@ -44,9 +46,10 @@ export default function Header() {
 
   return (
     <AppBar position="static">
+      <Container maxWidth="md">
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          <Link className={classes.homeLink} to="/">My Store!</Link>
+          <Link className={classes.homeLink} to="/">Photo Wish</Link>
         </Typography>
 
         {auth && (
@@ -82,6 +85,7 @@ export default function Header() {
         )}
         <Cart/>
       </Toolbar>
+      </Container>
     </AppBar>
   );
 }
