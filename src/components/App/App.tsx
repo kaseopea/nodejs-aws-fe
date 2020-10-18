@@ -23,6 +23,9 @@ function App() {
             <Route exact path="/">
               <PageProducts/>
             </Route>
+            <Route exact path="/index.html">
+              <PageProducts/>
+            </Route>
             <Route exact path={["/admin/product-form/:id", '/admin/product-form']}>
               <PageProductForm/>
             </Route>

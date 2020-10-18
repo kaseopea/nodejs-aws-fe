@@ -24,6 +24,22 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     flexGrow: 1,
+    padding: '6px 16px 0 16px'
+  },
+  cardTitle: {
+    fontFamily: '\'Roboto Condensed\', sans-serif',
+    fontSize: '20px',
+    fontWeight: 300,
+    textAlign: 'center'
+  },
+  cardPrice: {
+    fontFamily: '\'Secular One\', sans-serif',
+    fontSize: '20px',
+    textAlign: 'center'
+  },
+  cardActions: {
+    justifyContent: 'center',
+    padding: '0 8px'
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
@@ -48,18 +64,18 @@ export default function Products() {
           <Card className={classes.card}>
             <CardMedia
               className={classes.cardMedia}
-              image="https://source.unsplash.com/random"
+              image={`./assets/products/` + product.photo}
               title="Image title"
             />
             <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography className={classes.cardTitle} gutterBottom variant="h5" component="h2">
                 {product.title}
               </Typography>
-              <Typography>
+              <Typography className={classes.cardPrice}>
                 {formatAsPrice(product.price)}
               </Typography>
             </CardContent>
-            <CardActions>
+            <CardActions className={classes.cardActions}>
               <AddProductToCart product={product}/>
             </CardActions>
           </Card>
