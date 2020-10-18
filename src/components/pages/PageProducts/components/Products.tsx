@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     flexGrow: 1,
+    padding: '6px 16px 0 16px'
   },
   cardTitle: {
     fontFamily: '\'Roboto Condensed\', sans-serif',
@@ -37,7 +38,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   cardActions: {
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: '0 8px'
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
