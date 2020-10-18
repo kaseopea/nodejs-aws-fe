@@ -28,11 +28,16 @@ const useStyles = makeStyles((theme) => ({
   cardTitle: {
     fontFamily: '\'Roboto Condensed\', sans-serif',
     fontSize: '20px',
-    fontWeight: 300
+    fontWeight: 300,
+    textAlign: 'center'
   },
   cardPrice: {
     fontFamily: '\'Secular One\', sans-serif',
-    fontSize: '20px'
+    fontSize: '20px',
+    textAlign: 'center'
+  },
+  cardActions: {
+    justifyContent: 'center'
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
@@ -68,7 +73,7 @@ export default function Products() {
                 {formatAsPrice(product.price)}
               </Typography>
             </CardContent>
-            <CardActions>
+            <CardActions className={classes.cardActions}>
               <AddProductToCart product={product}/>
             </CardActions>
           </Card>
